@@ -1,0 +1,39 @@
+.employeeContainer {
+  position: relative;
+  overflow: hidden scroll;
+  left: 50%;
+  height: 80vh;
+  display: block;
+  user-select: none;
+  justify-content: space-evenly;
+  transform: translate(-50%, 0);
+}
+
+.initials {
+  position: relative;
+  float: left;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.card {
+  background-color: grey;
+  float: left;
+  width: 160px;
+  position: relative;
+  height: 120px;
+  border-radius: 20px;
+  margin: 5px;
+}
+
+.text {
+  font-size: 18px;
+  position: relative;
+  float: left;
+  font-family: "Monospace", sans-serif;
+  width: 160px;
+  top: 8%;
+  color: white;
+  text-align: center;
+}

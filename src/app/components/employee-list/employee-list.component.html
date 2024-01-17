@@ -1,0 +1,10 @@
+<div class="employeeContainer">
+  <ng-container *ngFor="let e of employees$ | async">
+    <ng-container class="inside">
+      <div class="card" (click)="click(e)">
+        <div class="initials" style="height: 50%"><app-employee-initials [employee]="e" [big]="false"></app-employee-initials></div>
+        <div class="text" style="height: 50%">{{ this.employeeFullName(e) }}</div>
+      </div>
+    </ng-container>
+  </ng-container>
+</div>
