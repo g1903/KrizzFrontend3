@@ -1,3 +1,6 @@
-<div style="height: 10vh; width: 100%; margin: 0px; background-color: red; position: unset"></div> <!-- SEARCH -->
-<app-employee-list style="width: 100%; top: 10vh;"></app-employee-list>
-<div style="height: 10vh; width: 100%; margin: 0px; background-color: red; position: unset;"></div> <!-- NAVBAR -->
+<div style="width: 100%; height: 100%">
+  <div class="search-bar" style=""></div> <!-- SEARCH -->
+  <app-employee-list class="employee-list" [style.height]="(window.innerHeight - 130) + 'px'"></app-employee-list>
+  <!--<app-qualification-card class="employee-list"></app-qualification-card>-->
+  <div class="nav-bar"></div> <!-- NAVBAR -->
+</div>
