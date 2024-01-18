@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {FormsModule} from "@angular/forms";
+import {Data} from "@angular/router";
+import {DataService} from "../../services/data-service";
 
 @Component({
   selector: 'app-add-qualification',
@@ -12,4 +14,11 @@ import {FormsModule} from "@angular/forms";
 export class AddQualificationComponent {
 
   public addQualification = "";
+
+  constructor(public dataService: DataService) {
+  }
+
+  public close() {
+    this.dataService.createQualificationDialog = false;
+  }
 }

@@ -6,6 +6,8 @@ import {RestService} from "./services/RestService";
 import {QualificationListComponent} from "./components/qualification-list/qualification-list.component";
 import {AddQualificationComponent} from "./components/add-qualification/add-qualification.component";
 import {EmployeeDetailsComponent} from "./components/employee-details/employee-details.component";
+import {Employee} from "./Employee";
+import {DataService} from "./services/data-service";
 
 @Component({
   selector: 'app-root',
@@ -18,6 +20,6 @@ export class AppComponent {
   title = 'Employee Service';
   protected readonly window = window;
 
-  constructor(public restService: RestService) {
+  constructor(public restService: RestService, public dataService: DataService) {
   }
 }

@@ -4,6 +4,8 @@ import {Qualification} from "../../qualification";
 import {RestService} from "../../services/RestService";
 import {Observable, of} from "rxjs";
 import {log} from "@angular-devkit/build-angular/src/builders/ssr-dev-server";
+import {dateTimestampProvider} from "rxjs/internal/scheduler/dateTimestampProvider";
+import {DataService} from "../../services/data-service";
 
 @Component({
   selector: 'app-qualification-card',
@@ -17,6 +19,8 @@ export class QualificationCardComponent {
   @Input() public selectable: boolean = false;
   @Input() public qualifications: string[] | undefined;
 
-  constructor(public restService: RestService) {
+  constructor(public restService: RestService, public dataService: DataService) {
   }
+
+  protected readonly dateTimestampProvider = dateTimestampProvider;
 }

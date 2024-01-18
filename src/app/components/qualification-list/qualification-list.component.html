@@ -1,18 +1,20 @@
-<div class="qualification-list">
-  <div class="head-line">
-    <input type="text" [ngModel]="addNewText" placeholder="Neue Qualifikation" class="input">
-    <div class="add-button"><div style="cursor: pointer">+</div></div>
-  </div>
-  <div class="separator"><div class="separator-line"></div></div>
-  <div class="outer-list">
-    <div class="inner-list">
-      <table>
-        <tr class="list-row" *ngFor="let qualification of restService.qualifications$ | async">
-          <td colspan="80%">{{qualification.skill}}</td>
-          <td colspan="10%"><span class="material-icons" style="font-size: 16px">edit</span></td>
-          <td colspan="10%"><span class="material-icons" style="font-size: 16px">delete</span></td>
-        </tr>
-      </table>
+<div class="background">
+  <div class="qualification-list">
+    <div class="head-line">
+      <input type="text" [ngModel]="addNewText" placeholder="Neue Qualifikation" class="input">
+      <div class="add-button"><div style="cursor: pointer">+</div></div>
+    </div>
+    <div class="separator"><div class="separator-line"></div></div>
+    <div class="outer-list">
+      <div class="inner-list">
+        <table>
+          <tr class="list-row" *ngFor="let qualification of restService.qualifications$ | async">
+            <td colspan="80%">{{qualification.skill}}</td>
+            <td colspan="10%"><span class="material-icons" style="font-size: 16px">edit</span></td>
+            <td colspan="10%"><span class="material-icons" style="font-size: 16px">delete</span></td>
+          </tr>
+        </table>
+      </div>
     </div>
   </div>
 </div>
