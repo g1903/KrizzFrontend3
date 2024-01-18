@@ -13,6 +13,7 @@ import {RestService} from "../../services/RestService";
 export class QualificationCardComponent {
 
   @Input() public selectable: boolean = false;
+  @Input() public qualifications: Qualification[] | undefined;
 
   constructor(public restService: RestService) {
   }
