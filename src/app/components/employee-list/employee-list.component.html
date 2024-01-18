@@ -1,6 +1,6 @@
 <div class="outerEmployeeContainer">
   <div [style.width]="getGoodWidth() + 'px'" class="innerEmployeeContainer">
-    <ng-container *ngFor="let employee of restService.employees$ | async">
+    <ng-container *ngFor="let employee of employees">
       <app-employee-card [employee]="employee" (click)="click(employee)"></app-employee-card>
     </ng-container>
   </div>

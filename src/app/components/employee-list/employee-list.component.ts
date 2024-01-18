@@ -13,7 +13,10 @@ import {RestService} from "../../services/RestService";
   styleUrl: './employee-list.component.css'
 })
 export class EmployeeListComponent {
+  employees: Employee[] = [];
+
   constructor(public restService: RestService) {
+    restService.employees$.forEach(e => e.forEach(ee => this.employees.push(new Employee(ee.id, ee.lastName, ee.firstName, ee.street, ee.postcode, ee.city, ee.phone))));
   }
 
   getGoodWidth() {

@@ -14,11 +14,4 @@ export class EmployeeCardComponent {
 
   @Input() public employee: Employee | undefined;
 
-  public employeeFullName(employee: Employee): string  {
-    let s = employee.firstName + " " + employee.lastName;
-    if (s.length >= 28) {
-      return s.substring(0, 27) + "...";
-    }
-    return s;
-  }
 }

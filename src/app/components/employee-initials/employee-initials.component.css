@@ -5,8 +5,8 @@
 }
 
 .big {
-  height: 100px;
-  width: 100px;
+  height: 130px;
+  width: 130px;
 }
 
 .small {
@@ -25,11 +25,11 @@
 }
 
 .text-small {
-  font-family: "Monospace", sans-serif;
+  font-family: "Tahoma", sans-serif;
   font-size: 25px;
 }
 
 .text-big {
-  font-family: "Monospace", sans-serif;
-  font-size: 50px;
+  font-family: "Tahoma", sans-serif;
+  font-size: 70px;
 }

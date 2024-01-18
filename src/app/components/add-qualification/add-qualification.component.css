@@ -5,7 +5,6 @@
   transform: translate(-50%,-50%);
   width: 260px;
   height: 120px;
-  border: #6868dc solid 1px;
 }
 
 .head-line {
@@ -39,6 +38,7 @@
   font-family: "Tahoma", sans-serif;
   font-size: 16px;
   left: 5px;
+  bottom: 2px;
 }
 
 .input:focus {
