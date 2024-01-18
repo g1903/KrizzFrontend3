@@ -5,3 +5,4 @@
     </ng-container>
   </div>
 </div>
+<app-default-popup *ngIf="selectedEmployee" [employeeData]="selectedEmployee" (closeForm)="closeEmployeeForm()" class="default-popup"></app-default-popup>
