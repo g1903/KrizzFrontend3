@@ -1,7 +1,7 @@
 import {Component, Input} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {Qualification} from "../../qualification";
-import {RestService} from "../../services/RestService";
+import {RestService} from "../../services/rest-service";
 import {Observable, of} from "rxjs";
 import {log} from "@angular-devkit/build-angular/src/builders/ssr-dev-server";
 import {dateTimestampProvider} from "rxjs/internal/scheduler/dateTimestampProvider";
@@ -20,6 +20,9 @@ export class QualificationCardComponent {
   @Input() public qualifications: string[] | undefined;
 
   constructor(public restService: RestService, public dataService: DataService) {
+    restService.qualifications$.subscribe(data => {
+      this.qualifications = data.filter(q => q.skill !== undefined).map(q => q.skill!) || [];
+    })
   }
 
   protected readonly dateTimestampProvider = dateTimestampProvider;

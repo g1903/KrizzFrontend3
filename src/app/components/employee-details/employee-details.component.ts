@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 import {Employee} from "../../Employee";
 import {EmployeeInitialsComponent} from "../employee-initials/employee-initials.component";
 import {QualificationCardComponent} from "../qualification-card/qualification-card.component";
-import {RestService} from "../../services/RestService";
+import {RestService} from "../../services/rest-service";
 import {Data} from "@angular/router";
 import {DataService} from "../../services/data-service";
+import {emit} from "@angular-devkit/build-angular/src/tools/esbuild/angular/compilation/parallel-worker";
 
 @Component({
   selector: 'app-employee-details',
@@ -17,13 +18,26 @@ import {DataService} from "../../services/data-service";
 export class EmployeeDetailsComponent {
 
   @Input() public employee: Employee | undefined;
-  public skills: string[] = [];
 
   constructor(public restService: RestService, private dataService: DataService) {
-    restService.fetchQualificationsForEmployee(26).subscribe(e => console.log(e.skillSet?.forEach(ee => this.skills.push(ee.skill))));
+    setTimeout(() => {
+      while (this.employee === undefined) {}
+      restService.fetchQualificationsForEmployee(this.employee!);
+    });
   }
 
   public close() {
     this.dataService.employeeDetails = undefined;
+  }
+
+  clickInside = false;
+  clickBackground() {
+    if (!this.clickInside) {
+      this.close();
+    }
+    this.clickInside = false;
+  }
+  clickForeground() {
+    this.clickInside = true;
   }
 }

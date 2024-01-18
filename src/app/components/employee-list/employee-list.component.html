@@ -1,7 +1,7 @@
 <div class="outerEmployeeContainer">
   <div [style.width]="getGoodWidth() + 'px'" class="innerEmployeeContainer">
-    <ng-container *ngFor="let employee of employees">
-      <app-employee-card [employee]="employee" (click)="click(employee)"></app-employee-card>
+    <ng-container *ngFor="let employee of dataService.employees">
+      <app-employee-card [employee]="employee"></app-employee-card>
     </ng-container>
   </div>
 </div>

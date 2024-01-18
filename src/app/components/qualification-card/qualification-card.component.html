@@ -5,17 +5,9 @@
   </div>
   <div class="qualification-list">
     <div class="inner-list">
-      <ng-container *ngIf="qualifications === undefined; then all else list"></ng-container>
-      <ng-template #all>
-        <div class="qualification" *ngFor="let qualification of restService.qualifications$ | async">
-          <input type="checkbox" class="selectButton" *ngIf="selectable">{{qualification.skill}}
-        </div>
-      </ng-template>
-      <ng-template #list>
-        <div class="qualification" *ngFor="let qualification of qualifications">
-          <input type="checkbox" class="selectButton" *ngIf="selectable">{{qualification}}
-        </div>
-      </ng-template>
+      <div class="qualification" *ngFor="let qualification of qualifications">
+        <input type="checkbox" class="selectButton" *ngIf="selectable">{{qualification}}
+      </div>
     </div>
   </div>
 </div>

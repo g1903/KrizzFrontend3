@@ -16,6 +16,13 @@
   border-radius: 20px;
 }
 
+.close-button {
+  position: fixed;
+  right: 2px;
+  top: 2px;
+  user-select: none;
+}
+
 .head-line {
   position: relative;
   left: 50%;
@@ -40,6 +47,7 @@
 }
 
 .add-button {
+  user-select: none;
   background-color: transparent;
   text-align: right;
   position: relative;
@@ -85,6 +93,7 @@
 }
 
 .inner-list {
+  user-select: none;
   position: relative;
   width: 200px;
   height: 300px;
@@ -112,4 +121,12 @@ table {
 .icon {
   font-size: 12px;
   font-family: "Tahoma", sans-serif;
+}
+
+.edit-input {
+  font-size: 16px;
+  font-family: "Tahoma", sans-serif;
+  height: 15px;
+  width: 125px;
+  border: none;
 }

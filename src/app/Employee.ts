@@ -1,4 +1,6 @@
 export class Employee {
+  public skills: string[] = [];
+
   constructor(public id?: number,
               public lastName?: string,
               public firstName?: string,

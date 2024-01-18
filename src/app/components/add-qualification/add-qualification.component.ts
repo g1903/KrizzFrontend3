@@ -21,4 +21,15 @@ export class AddQualificationComponent {
   public close() {
     this.dataService.createQualificationDialog = false;
   }
+
+  clickInside = false;
+  clickBackground() {
+    if (!this.clickInside) {
+      this.close();
+    }
+    this.clickInside = false;
+  }
+  clickForeground() {
+    this.clickInside = true;
+  }
 }

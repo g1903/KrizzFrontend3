@@ -14,11 +14,12 @@
   height: 520px;
   background-color: white;
   border-radius: 20px;
+  user-select: none;
 }
 
 .close-button {
   position: fixed;
-  right: 5px;
+  right: 2px;
   top: 2px;
 }
 
